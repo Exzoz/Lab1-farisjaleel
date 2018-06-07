@@ -1,22 +1,25 @@
 package hw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzz {
 
-    public String[] fizzBuzzArray(final int n ) {
-        if (n > 0){
-            String[] array = new String[n];
-            for (int i=1; i<=n; i++){
+    public List<String> fizzBuzzArray(final int n ) {
+        if (n > 0) {
+            List<String> list = new ArrayList();
+            for (int i=1; i<=n; i++) {
                 if (i % 15 == 0) {
-                    array[i - 1] = "FizzBuzz";
+                    list.add("FizzBuzz");
                 } else if (i % 5 == 0) {
-                    array[i-1] = "Buzz";
+                    list.add("Buzz");
                 } else if (i % 3 == 0) {
-                    array[i-1] = "Fizz";
+                    list.add("Fizz");
                 } else {
-                    array[i-1] = i + "";
+                    list.add(i + "");
                 }
             }
-            return array;
+            return list;
         } else {
             return null;
         }

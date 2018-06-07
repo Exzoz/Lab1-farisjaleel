@@ -1,6 +1,6 @@
 package hw;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -14,15 +14,14 @@ public class Main {
 
         System.out.println("The argument entered must be an integer ");
         System.exit(1);
-
       }
     }
 
     if (max > 0) {
       FizzBuzz fizzBuzz = new FizzBuzz();
-      String[] result = fizzBuzz.fizzBuzzArray(max);
+      List<String> result = fizzBuzz.fizzBuzzArray(max);
       for (int i = 0; i < max; i++) {
-        System.out.println(result[i]);
+        System.out.println(result.get(i));
       }
     } else {
       System.out.println("Please enter a positive integer");

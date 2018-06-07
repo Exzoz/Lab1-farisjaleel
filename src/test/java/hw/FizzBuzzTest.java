@@ -1,8 +1,11 @@
 package hw;
 
-import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Before;
+import org.junit.Test;
 
 public class FizzBuzzTest {
 
@@ -15,9 +18,9 @@ public class FizzBuzzTest {
 
     @Test
     public void testFizzBuzz() {
-        //tests inputs
+        //tests inputs -10,-1,0,1,7,17
 
-        String[] result = fixture.fizzBuzzArray(-10);
+        List<String> result = fixture.fizzBuzzArray(-10);
         assertEquals(null, result);
 
         result = fixture.fizzBuzzArray(-1);
@@ -27,14 +30,13 @@ public class FizzBuzzTest {
         assertEquals(null, result);
 
         result = fixture.fizzBuzzArray(1);
-        assertEquals(new String[] {"1"}, result);
+        assertEquals(Arrays.asList("1"), result);
 
         result = fixture.fizzBuzzArray(7);
-        assertEquals(new String[] {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7"}, result);
-
+        assertEquals(Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7"), result);
 
         result = fixture.fizzBuzzArray(17);
-        assertEquals(new String[] {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17"}, result);
+        assertEquals(Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17"), result);
 
 
 
